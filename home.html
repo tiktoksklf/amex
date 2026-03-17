@@ -1,7 +1,20 @@
 <html lang="en"><head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amex Style Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Dashboard</title>
+
+  <!-- iOS PWA -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Dashboard">
+
+  <!-- Theme -->
+  <meta name="theme-color" content="#2f6287">
+
+  <!-- Icon -->
+  <link rel="apple-touch-icon" href="image33.png">
+  <link rel="icon" href="image33.png">
+
   <style>
     :root {
       --amex-blue: #2f6287;
@@ -34,6 +47,12 @@
       display: flex;
       justify-content: center;
       min-height: 100vh;
+
+      /* 🔥 THIS removes borders / notch issues */
+      padding-top: env(safe-area-inset-top);
+      padding-bottom: env(safe-area-inset-bottom);
+      padding-left: env(safe-area-inset-left);
+      padding-right: env(safe-area-inset-right);
     }
 
     .app {
